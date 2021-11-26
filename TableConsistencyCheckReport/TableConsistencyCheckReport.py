@@ -19,7 +19,6 @@ today = now.strftime("%d-%m-%Y")
 
 # Beginning of the User Editable Area
 hdbuserstore_key = "<KEY>"
-system_name = os.environ["SAPSYSTEMNAME"]
 smtp_server = "<SMTP HOST>"
 smtp_port = "<SMTP PORT>"
 email_from = "<FROM ADDRESS>"
@@ -27,6 +26,7 @@ email_to = "<TO ADDRESS>"
 # email_cc = "<LIST OF ADDRESSES SEPERATED BY A COMMA>"
 separator = "====================================================================="
 # End of the User Editable Area
+system_name = os.environ["SAPSYSTEMNAME"]
 subject = "Table consistency report for {ph_system_name} on {ph_today}".format(ph_system_name=system_name, ph_today=today)
 consistency_check_result_count = "SELECT COUNT(*) FROM M_CONSISTENCY_CHECK_HISTORY_ERRORS WHERE SEVERITY = 'HIGH';"
 consistency_check_error_count = "SELECT COUNT(*) FROM M_CONSISTENCY_CHECK_HISTORY_ERRORS WHERE SEVERITY = 'ERROR';"
