@@ -122,10 +122,8 @@ try:
 except Exception as e:
     trace_file.write("{ph_now} Unable to send the email. Exception information:\n %s".format(ph_now=now) % e)
 
-try:
-    email_sender.quit()
-except Exception as e:
-    trace_file.write("{ph_now} Unable to disconnect from the email server. Exception information:\n %s".format(ph_now=now) % e)
+# Disconnect from the SMTP server and close the connection
+email_sender.quit()
 
 # Close the trace file that was opened previously for writing any exceptions caught
 trace_file.close()
