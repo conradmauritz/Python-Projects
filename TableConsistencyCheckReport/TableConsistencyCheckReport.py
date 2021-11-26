@@ -1,4 +1,3 @@
-
 """TableConsistencyCheckReport.py: This script connects to a HANA tenant database and retrieves results related to the
 table consistency check which is then sent as a report via email"""
 
