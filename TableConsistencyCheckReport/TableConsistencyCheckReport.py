@@ -32,7 +32,6 @@ consistency_check_result_count = "SELECT COUNT(*) FROM M_CONSISTENCY_CHECK_HISTO
 consistency_check_error_count = "SELECT COUNT(*) FROM M_CONSISTENCY_CHECK_HISTORY_ERRORS WHERE SEVERITY = 'ERROR';"
 consistency_check_last_run = "SELECT TOP 1 * FROM (SELECT TO_VARCHAR(LAST_START_TIME, 'DD-MM-YYYY HH24:MI:SS') FROM M_CONSISTENCY_CHECK_HISTORY ORDER BY LAST_START_TIME DESC);"
 
-
 # Create  a trace file and write any exceptions that have been caught to the trace file
 try:
     if not os.path.exists("TableConsistencyCheckTraces"):
