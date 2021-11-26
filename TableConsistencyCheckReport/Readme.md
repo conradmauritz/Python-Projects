@@ -2,4 +2,4 @@ The purpose of the TableConsistencyCheckReport.py script is to retrieve the late
 
 The requirement was to reduce the manual effort required to frequently execute manual reviews of the consistency check results on multiple systems, and to automate the process instead. 
 
-The line (# email_cc = "<LIST OF ADDRESSES SEPERATED BY A COMMA>") can be uncommented if the report has to be sent to multiple recipients. The line (# msg["Cc"] = email_cc) should then also be uncommented so that the value(s) set for the email_cc variable is attached to the message.
+The line # email_cc = "LIST OF ADDRESSES SEPERATED BY A COMMA" can be uncommented if the report has to be sent to multiple recipients. The line # msg["Cc"] = email_cc should then also be uncommented so that the value(s) set for the email_cc variable is attached to the message.
