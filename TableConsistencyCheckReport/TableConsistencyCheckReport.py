@@ -106,7 +106,7 @@ Last consistency run: {ph_consistency_last_run}
 \n
 
 Kind regards \n
-CZ HANA Team""".format(ph_separator=separator, ph_system_name=system_name, ph_table_inconsistency_count=table_inconsistency_count, ph_consistency_error_count=consistency_error_count, ph_consistency_last_run=consistency_last_run, ph_today=today)
+""".format(ph_separator=separator, ph_system_name=system_name, ph_table_inconsistency_count=table_inconsistency_count, ph_consistency_error_count=consistency_error_count, ph_consistency_last_run=consistency_last_run, ph_today=today)
 
 # Put together the report email and send
 email_sender = smtplib.SMTP(host=smtp_server, port=smtp_port)
