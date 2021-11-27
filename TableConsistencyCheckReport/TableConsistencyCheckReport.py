@@ -92,16 +92,16 @@ except Exception as e:
 # Message template
 message = """The following information displays the latest consistency check results for {ph_system_name} on {ph_today}
 \n
-{ph_separator}
-Number of tables with inconsistencies: {ph_table_inconsistency_count}
+{ph_separator}\n
+Number of tables with inconsistencies: {ph_table_inconsistency_count}\n
 {ph_separator} \n
 \n
-{ph_separator}
-Number of consistency checks that have ended with an error: {ph_consistency_error_count}
+{ph_separator}\n
+Number of consistency checks that have ended with an error: {ph_consistency_error_count}\n
 {ph_separator} \n
 \n
-{ph_separator}
-Last consistency run: {ph_consistency_last_run}
+{ph_separator}\n
+Last consistency run: {ph_consistency_last_run}\n
 {ph_separator} \n
 \n
 
