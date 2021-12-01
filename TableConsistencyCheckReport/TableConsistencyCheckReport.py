@@ -34,9 +34,9 @@ consistency_check_last_run = "SELECT TOP 1 * FROM (SELECT TO_VARCHAR(LAST_START_
 
 # Create  a trace file and write any exceptions that have been caught to the trace file
 try:
-    if not os.path.exists("TableConsistencyCheckTraces"):
-        os.makedirs("TableConsistencyCheckTraces")
-    trace_file = open("TableConsistencyCheckTraces/Table_consistency_check_{ph_system_name}_{ph_today}.trc".format(ph_system_name=system_name, ph_today=today), "w+")
+    if not os.path.exists("/FullPath/TableConsistencyCheckTraces"):
+        os.makedirs("/FullPath/TableConsistencyCheckTraces")
+    trace_file = open("/FullPath/TableConsistencyCheckTraces/Table_consistency_check_{ph_system_name}_{ph_today}.trc".format(ph_system_name=system_name, ph_today=today), "w+")
 except Exception  as e:
     print("{ph_now} Unable to open or write to the trace file. Exception information:\n %s".format(ph_now=now) % e)
 
