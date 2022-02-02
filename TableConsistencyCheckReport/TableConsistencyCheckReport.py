@@ -39,6 +39,7 @@ try:
     trace_file = open("/FullPath/TableConsistencyCheckTraces/Table_consistency_check_{ph_system_name}_{ph_today}.trc".format(ph_system_name=system_name, ph_today=today), "w+")
 except Exception as e:
     print("{ph_now} Unable to open or write to the trace file. Exception information:\n %s".format(ph_now=now) % e)
+    sys.exit(1)
 
 # Initialize the connection to HANA and execute the three queries defined at the start of this script
 try:
